@@ -14,10 +14,6 @@
 <img src="https://github.com/siduck/chadwm/blob/screenshots/screenshots/gruvchad.png">
 (gruvbox material dark)
 
-# Tag preview (while hovering tag icon)
-
-https://user-images.githubusercontent.com/59060246/223068062-d3c9847a-8713-42c7-bc9d-07247a0486a8.mp4
-
 # Requirements
 
 - dash (shell)
