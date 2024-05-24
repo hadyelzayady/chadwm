@@ -6,7 +6,7 @@
 interval=0
 
 # load colors
-. ~/projects/chadwm/scripts/bar_themes/onedark
+. ~/oss/chadwm/scripts/bar_themes/onedark
 
 cpu() {
 	cpu_val=$(grep -o "^[^ ]*" /proc/loadavg)
@@ -86,7 +86,10 @@ keyboard() {
 	fi
 	printf "^c$black^ ^b$white^ %s " "$kb_lang"
 }
+network_name(){
+  printf "^b$green^$(nmcli connection show --active | grep wifi | awk '{print $1}')"
+}
 
 while true; do
-	sleep 1 && xsetroot -name "$(battery) $(brightness) $(volume) $(cpu) $(mem) $(clock) $(keyboard)"
+  sleep 1 && xsetroot -name "$(battery) $(brightness) $(volume) $(cpu) $(mem) $(clock) $(keyboard)$(network_name)"
 done
